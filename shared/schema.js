@@ -25,7 +25,6 @@ const schema = {
     product_type: joi.string().required(),
     rating: joi.number().required(),
     price: joi.number().required(),
-    // product_colors: joi.array(),
     image_link: joi.string().required(),
   }),
 };
