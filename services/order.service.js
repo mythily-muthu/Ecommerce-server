@@ -45,7 +45,7 @@ const service = {
   async getOrder(req, res) {
     console.log("get order");
     try {
-      const get = await db.orders.find({ userId: req.params.id }).toArray();
+      const get = await db.orders.find({ userId: req.params.userId }).toArray();
       console.log(get);
       res.status(200).send(get);
     } catch (err) {
