@@ -21,7 +21,7 @@ function verifyTokenAndAuthorization(req, res, next) {
   console.log("authorization");
   verifyToken(req, res, () => {
     console.log(req.user.userId, req.params.id);
-    if (req.user.userId === req.params.id || req.user.isAdmin) {
+    if (req.user.userId === req.params.userId || req.user.isAdmin) {
       next();
     } else {
       res.status(403).send("you are not allow to do manipulation");
